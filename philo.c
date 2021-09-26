@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 13:10:20 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/09/26 16:06:51 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/09/26 16:08:49 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ int main()
        sleep(1);
        printf("philo is eating \n");
        sleep(1);
+       printf("kifash andir lhadshi ?\n");
+       usleep(200);
    }
 }
