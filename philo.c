@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 13:10:20 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/09/27 15:19:33 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/09/27 15:29:39 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,29 @@ int main()
     //protect forks with a mutex to avoid duplicating forks
     //every philo is a process | fork ->shared resource 
     
+
+
+
+
+
+    //consider we have 5 philo
+    // first case : philo nbr 1 is eating : 
+    //if philo nbr 1 is eating 
+    // philo nbr 2 either sleeping or thinking
+    //philo nbr 3 either eating or sleeping or thinking
+    //if philo nbr 3 is eating 
+    // philo nbr 4 either is sleeping or thinking 
+    // if philo nbr 3 is not eating 
+    // philo nbr 4 either eating or sleeping or thinking 
+    // philo nbr 5 either sleeping or thinking 
+
+
+
+    //philo nbr 1 eating == philo nbr 3 or philo nbr 4 is eating
+    // "same logic" philo nbr 2 == philo nbr 4 or philo nbr 5
+    //philo nbr 3 == philo nbr 5 or philo nbr 1
+    // philo nbr 4 == philo nbr 1 or philo nbr 2
+    //philo nbr 5 == philo nbr 2 or philo nbr 3;
    while(1)
    {
        printf("fist philo is thinking \n");
