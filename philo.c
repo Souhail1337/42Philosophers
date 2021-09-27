@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 13:10:20 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/09/27 15:29:39 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/09/27 15:39:32 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,13 @@ int main()
     //philo nbr 3 == philo nbr 5 or philo nbr 1
     // philo nbr 4 == philo nbr 1 or philo nbr 2
     //philo nbr 5 == philo nbr 2 or philo nbr 3;
+    //fiirst in first server 
+    // philo 1 is eating == philo 3 is eating 
+    //philo 2 4 and 5 either sleeping or thinking
+
+
+    
+    //P1->P3->P5->P2->P4->P1->P3->P5->P2->P4....
    while(1)
    {
        printf("fist philo is thinking \n");
