@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 13:10:20 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/09/27 15:39:32 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/09/27 15:40:49 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int main()
     // if philo nbr 3 is not eating 
     // philo nbr 4 either eating or sleeping or thinking 
     // philo nbr 5 either sleeping or thinking 
-
+    // zbi
 
 
     //philo nbr 1 eating == philo nbr 3 or philo nbr 4 is eating
