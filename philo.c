@@ -6,63 +6,48 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 13:10:20 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/09/27 15:40:49 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/10/08 10:37:29 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "philosophers.h"
-#include<unistd.h>
-#include <stdlib.h>
- 
-int main()
+#include "philo.h"
+void error()
 {
-    //TODO:
-    // mutex and pthreads
-    //forks process 
-    // deadlock concept
-    // each philo is a thread
-    //protect forks with a mutex to avoid duplicating forks
-    //every philo is a process | fork ->shared resource 
+    printf("Error check ur syntax \n");
+    exit(0);
+}
+
+t_philo* init(int ac, char **av)
+{
+    t_philo *ar;
+    ar = (t_philo*)malloc(sizeof(t_philo));
+    if (!ar)
+        exit(0);
+    if ((ar->philo = ft_atoi(av[1])) < 0)
+        error();    
+    if ((ar->die = ft_atoi(av[2])) < 0)
+        error();
+    if ((ar->eat = ft_atoi(av[3])) < 0)
+        error();
+    if ((ar->sleep = ft_atoi(av[4])) < 0)
+        error();
+    if (ac == 6)
+    {
+        if ((ar->meals = ft_atoi(av[5])) < 0)
+            error();
+    }
+    else
+        ar->meals = 0;
+    return (ar);
+}
+ 
+int main(int ac, char **av)
+{
+    t_philo *ar;
+    if (ac < 5 || ac > 6 )
+        error();
     
-
-
-
-
-
-    //consider we have 5 philo
-    // first case : philo nbr 1 is eating : 
-    //if philo nbr 1 is eating 
-    // philo nbr 2 either sleeping or thinking
-    //philo nbr 3 either eating or sleeping or thinking
-    //if philo nbr 3 is eating 
-    // philo nbr 4 either is sleeping or thinking 
-    // if philo nbr 3 is not eating 
-    // philo nbr 4 either eating or sleeping or thinking 
-    // philo nbr 5 either sleeping or thinking 
-    // zbi
-
-
-    //philo nbr 1 eating == philo nbr 3 or philo nbr 4 is eating
-    // "same logic" philo nbr 2 == philo nbr 4 or philo nbr 5
-    //philo nbr 3 == philo nbr 5 or philo nbr 1
-    // philo nbr 4 == philo nbr 1 or philo nbr 2
-    //philo nbr 5 == philo nbr 2 or philo nbr 3;
-    //fiirst in first server 
-    // philo 1 is eating == philo 3 is eating 
-    //philo 2 4 and 5 either sleeping or thinking
-
-
+    ar =  init(ac, av);
+    printf("%d , %d , %d , %d \n",ar->philo, ar->die, ar->eat, ar->sleep);
     
-    //P1->P3->P5->P2->P4->P1->P3->P5->P2->P4....
-   while(1)
-   {
-       printf("fist philo is thinking \n");
-       sleep(1);
-       printf("philo is sleeping\n");
-       sleep(1);
-       printf("philo is eating \n");
-       sleep(1);
-       printf("kifash andir lhadshi ?\n");
-       usleep(200);
-   }
 }

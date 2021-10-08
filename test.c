@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.h                                            :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/26 13:10:37 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/10/08 10:34:15 by sel-fcht         ###   ########.fr       */
+/*   Created: 2021/09/27 15:58:20 by sel-fcht          #+#    #+#             */
+/*   Updated: 2021/09/28 15:05:19 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_H
-# define PHILO_H
-
-#include <unistd.h>
-#include <math.h>
+#include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
-typedef struct s_philo
+
+void *routine()
 {
-    int philo;
-    int die;
-    int eat;
-    int sleep;
-    int meals;
-}   t_philo;
-t_philo options;
+    printf("test from thread \n");
+    sleep(3);
+    printf("ending thread\n");
+    
+}
 
-int			ft_atoi(char *str);
-
-
-#endif 
+int main(int ac, char **av)
+{
+    pthread_t t1;
+    pthread_t t2;
+    pthread_create(&t1, NULL, &routine, NULL);
+    pthread_create(&t2, NULL, &routine, NULL);
+    pthread_join(t1, NULL);
+    pthread_join(t2, NULL);
+    return (0);
+}
