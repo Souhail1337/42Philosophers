@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 13:10:20 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/10/08 11:41:22 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/10/08 12:47:21 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,5 @@ int main(int ac, char **av)
     ar =  init(ac, av);
     if (ar->philo == 0 || ar->meals == 0)
         return (0);
+    thread_philo(ar);
 }

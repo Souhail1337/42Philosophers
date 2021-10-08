@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 13:10:37 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/10/08 11:39:43 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/10/08 12:42:32 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_philo
     pthread_mutex_t *forks;
     pthread_mutex_t print;
     int *eating;
+    int index_of_philo;
     
 }   t_philo;
 t_philo options;
