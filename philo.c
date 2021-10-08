@@ -6,11 +6,12 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 13:10:20 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/10/08 10:37:29 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/10/08 11:40:39 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
+
 void error()
 {
     printf("Error check ur syntax \n");
@@ -46,8 +47,8 @@ int main(int ac, char **av)
     t_philo *ar;
     if (ac < 5 || ac > 6 )
         error();
-    
+    if (ar->philo == 0 || ar->meals == 0)
+        return (0);
     ar =  init(ac, av);
-    printf("%d , %d , %d , %d \n",ar->philo, ar->die, ar->eat, ar->sleep);
     
 }

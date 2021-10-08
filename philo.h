@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 13:10:37 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/10/08 10:34:15 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/10/08 11:39:43 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <pthread.h>
+
 
 typedef struct s_philo
 {
@@ -25,8 +28,22 @@ typedef struct s_philo
     int eat;
     int sleep;
     int meals;
+    pthread_t *thread;
+    pthread_mutex_t *forks;
+    pthread_mutex_t print;
+    int *eating;
+    
 }   t_philo;
 t_philo options;
+
+// typedef struct s_parameters
+// {
+//     int num_of_philo;
+//     int right_fork;
+//     int left_fork;
+    
+    
+// };
 
 int			ft_atoi(char *str);
 
